@@ -9,6 +9,14 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+      title: 'Meisterstücke für kleine Entdecker',
+      titleTemplate: '%s · Kessaku Kids',
+    },
+  },
+
   css: ['~/assets/scss/main.scss'],
 
   alias: {
@@ -27,7 +35,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    [`${routes.STYLEGUIDE}/**`]: { appLayout: 'styleguide' }
+    [`${routes.STYLEGUIDE}/**`]: { appLayout: 'styleguide' },
   },
 
   compatibilityDate: '2024-04-03',
@@ -36,11 +44,12 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "~/assets/scss/variables.scss" as *;',
+          additionalData: '@use "~/assets/scss/global.scss" as *;',
         },
       },
     },
   },
+
   postcss: {
     plugins: {
       'postcss-pxtorem': {
@@ -56,7 +65,7 @@ export default defineNuxtConfig({
 
   eslint: {
     config: {
-      stylistic: true
-    }
+      stylistic: true,
+    },
   },
 });

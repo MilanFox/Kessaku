@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use 'global' as *;
 
 *, *::after, *::before {
   box-sizing: border-box;
