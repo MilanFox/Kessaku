@@ -3,9 +3,11 @@ import { resolve } from 'path';
 import { routes } from './config/routes';
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@pinia/nuxt', '@vueuse/nuxt'],
+  modules: ['@nuxt/eslint', '@pinia/nuxt', '@vueuse/nuxt', '@storyblok/nuxt'],
 
-  components: [{ path: './components', pathPrefix: false }],
+  components: [
+    { path: './components', pathPrefix: false },
+  ],
 
   devtools: { enabled: true },
 
@@ -26,6 +28,7 @@ export default defineNuxtConfig({
     '@atoms': resolve(__dirname, './app/components/atoms'),
     '@molecules': resolve(__dirname, './app/components/molecules'),
     '@organisms': resolve(__dirname, './app/components/organisms'),
+    '@sb': resolve(__dirname, './app/storyblok'),
     '@stores': resolve(__dirname, './app/stores'),
     '@composables': resolve(__dirname, './app/composables'),
     '@constants': resolve(__dirname, './app/constants'),
@@ -67,5 +70,11 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
+  },
+
+  storyblok: {
+    accessToken: 'invalid',
+    bridge: true,
+    apiOptions: { region: 'eu' },
   },
 });
