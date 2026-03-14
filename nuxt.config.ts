@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import { routes } from './config/routes';
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@pinia/nuxt', '@vueuse/nuxt', '@storyblok/nuxt'],
+  modules: ['@nuxt/eslint', '@pinia/nuxt', '@vueuse/nuxt', '@storyblok/nuxt', '@nuxtjs/sitemap'],
 
   components: [
     { path: './components', pathPrefix: false },
@@ -20,6 +20,10 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/scss/main.scss'],
+
+  site: {
+    url: process.env.APP_BASE_URL,
+  },
 
   alias: {
     '@assets': resolve(__dirname, './assets'),
@@ -70,6 +74,11 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
+  },
+
+  sitemap: {
+    sources: ['/api/__sitemap__/urls'],
+    exclude: [`${routes.STYLEGUIDE}/**`],
   },
 
   storyblok: {
