@@ -3,7 +3,14 @@ import { resolve } from 'path';
 import { routes } from './config/routes';
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@pinia/nuxt', '@vueuse/nuxt', '@storyblok/nuxt', '@nuxtjs/sitemap'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxtjs/sitemap',
+    '@pinia/nuxt',
+    '@storyblok/nuxt',
+    '@vercel/speed-insights',
+    '@vueuse/nuxt',
+  ],
 
   components: [
     { path: './components', pathPrefix: false },
