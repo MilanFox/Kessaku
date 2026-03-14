@@ -4,6 +4,7 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const slug = (route.params.slug as string[]).join('/');
-const story = await useStoryblok(slug, { version: 'published' });
+const { slug } = route.params;
+const slugPath = [slug].flat().join('/') || 'home';
+const story = await useStoryblok(slugPath, { version: 'published' });
 </script>
