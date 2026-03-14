@@ -45,6 +45,11 @@ export default defineNuxtConfig({
     [`${routes.STYLEGUIDE}/**`]: { appLayout: 'styleguide' },
   },
 
+  sourcemap: {
+    server: true,
+    client: true,
+  },
+
   compatibilityDate: '2024-04-03',
 
   vite: {
