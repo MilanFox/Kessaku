@@ -4,4 +4,4 @@
   </footer>
 </template>
 
-<style lang="scss" src="./Footer.style.scss"/>
+<style lang="scss" src="./Footer.style.scss" />

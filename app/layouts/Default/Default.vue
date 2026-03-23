@@ -1,13 +1,13 @@
 <template>
   <div class="default-layout">
-    <Header/>
+    <Header />
 
     <main id="main">
-      <NuxtPage/>
+      <NuxtPage />
     </main>
 
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
-<style lang="scss" src="./Default.style.scss"/>
+<style lang="scss" src="./Default.style.scss" />

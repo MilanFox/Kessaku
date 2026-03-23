@@ -1,7 +1,7 @@
 <template>
   <header class="header">
-    <KessakuLogo/>
+    <KessakuLogo />
   </header>
 </template>
 
-<style lang="scss" src="./Header.style.scss"/>
+<style lang="scss" src="./Header.style.scss" />

@@ -14,12 +14,12 @@
       </header>
 
       <div class="demo-page__navigation-tree">
-        <StyleguideNavigation :data="demoRoutes"/>
+        <StyleguideNavigation :data="demoRoutes" />
       </div>
     </nav>
 
     <main class="demo-page__content">
-      <slot/>
+      <slot />
     </main>
   </div>
 </template>
@@ -40,7 +40,8 @@ const demoRoutes = useRouter()
     parts.forEach((part, i) => {
       if (i === parts.length - 1) {
         currentNode[part] = route.path;
-      } else {
+      }
+      else {
         currentNode[part] ??= {};
         currentNode = currentNode[part] as TreeNode;
       }
@@ -50,4 +51,4 @@ const demoRoutes = useRouter()
   }, {});
 </script>
 
-<style lang="scss" src="./Styleguide.style.scss"/>
+<style lang="scss" src="./Styleguide.style.scss" />
