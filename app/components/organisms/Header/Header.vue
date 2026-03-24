@@ -1,6 +1,8 @@
 <template>
-  <header class="header">
-    <KessakuLogo />
+  <header class="header container">
+    <div class="header__content">
+      <KessakuLogo />
+    </div>
   </header>
 </template>
 
