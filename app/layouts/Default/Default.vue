@@ -2,7 +2,7 @@
   <div class="default-layout">
     <Header />
 
-    <main id="main">
+    <main id="main" class="container">
       <NuxtPage />
     </main>
 

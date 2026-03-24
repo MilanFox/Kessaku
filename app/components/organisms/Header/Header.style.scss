@@ -1,6 +1,12 @@
 .header {
-  display: flex;
-  height: 80px;
-  padding: 8px 16px;
-  border-bottom: 1px solid black;
+  position: sticky;
+  box-shadow: 0 0 16px rgba($color-dark-blue, 0.25);
+  margin: 32px;
+  padding: 4px;
+  border-radius: 32px;
+
+  &__content {
+    display: flex;
+    height: 80px;
+  }
 }

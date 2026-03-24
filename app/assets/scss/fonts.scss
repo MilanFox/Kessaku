@@ -1,0 +1,37 @@
+/* Nunito Variable */
+@font-face {
+  font-family: 'Nunito';
+  src: url('@/assets/fonts/Nunito-Variable.woff2') format('woff2-variations'),
+  url('@/assets/fonts/Nunito-Variable.woff2') format('woff2');
+  font-weight: 200 1000;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('@/assets/fonts/Nunito-Variable-Italic.woff2') format('woff2-variations'),
+  url('@/assets/fonts/Nunito-Variable-Italic.woff2') format('woff2');
+  font-weight: 200 1000;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* Roboto Variable */
+@font-face {
+  font-family: 'Roboto';
+  src: url('@/assets/fonts/Roboto-Variable.woff2') format('woff2-variations'),
+  url('@/assets/fonts/Roboto-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('@/assets/fonts/Roboto-Variable-Italic.woff2') format('woff2-variations'),
+  url('@/assets/fonts/Roboto-Variable-Italic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
