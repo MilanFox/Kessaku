@@ -16,6 +16,7 @@
     "@storyblok/nuxt": "^10.1.0",
     "@vercel/speed-insights": "^2.0.0",
     "nuxt": "^4.4.2",
+    "nuxt-gtag": "^4.1.0",
     "pinia": "^3.0.4",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3"
