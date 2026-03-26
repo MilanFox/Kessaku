@@ -32,6 +32,12 @@ export default defineNuxtConfig({
     url: process.env.APP_BASE_URL,
   },
 
+  runtimeConfig: {
+    basicAuthEnabled: false,
+    basicAuthUsername: '',
+    basicAuthPassword: '',
+  },
+
   alias: {
     '@assets': resolve(__dirname, './assets'),
     '@config': resolve(__dirname, './config'),
