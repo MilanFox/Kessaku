@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@storyblok/nuxt',
     '@vercel/speed-insights',
     '@vueuse/nuxt',
+    'nuxt-gtag',
   ],
 
   components: [
@@ -92,6 +93,15 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
+  },
+
+  gtag: {
+    id: process.env.NODE_ENV === 'development'
+      ? process.env.NUXT_PUBLIC_GTAG_LOCAL_ID
+      : (process.env.VERCEL_ENV === 'preview'
+          ? (process.env.NUXT_PUBLIC_GTAG_UAT_ID || process.env.NUXT_PUBLIC_GTAG_PROD_ID)
+          : process.env.NUXT_PUBLIC_GTAG_PROD_ID),
+    enabled: true
   },
 
   sitemap: {
