@@ -8,15 +8,9 @@
 </template>
 
 <script setup lang="ts">
-type BadgeTone = 'neutral' | 'success' | 'warning' | 'danger';
+import type { DemoBadgeProps } from './DemoBadge.types';
 
-interface Props {
-  label?: string
-  tone?: BadgeTone
-  pill?: boolean
-}
-
-withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<DemoBadgeProps>(), {
   label: 'Badge',
   tone: 'neutral',
   pill: false,

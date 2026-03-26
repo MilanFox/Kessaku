@@ -15,11 +15,12 @@
 
 <script setup lang="ts">
 import type { PlaygroundFieldType } from '@components/styleguide/PlaygroundField/PlaygroundField.types';
+import { BUTTON_SIZES } from '@atoms/DemoButton/DemoButton.types';
 import DemoButton from '@atoms/DemoButton/DemoButton.vue';
 
 const fields: Record<string, PlaygroundFieldType> = {
   label: { type: 'text' },
-  size: { type: 'select', options: ['sm', 'md', 'lg'] },
+  size: { type: 'select', options: [...BUTTON_SIZES] },
   disabled: { type: 'boolean' },
 };
 

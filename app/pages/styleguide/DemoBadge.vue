@@ -13,11 +13,12 @@
 
 <script setup lang="ts">
 import type { PlaygroundFieldType } from '@components/styleguide/PlaygroundField/PlaygroundField.types';
+import { BADGE_TONES } from '@atoms/DemoBadge/DemoBadge.types';
 import DemoBadge from '@atoms/DemoBadge/DemoBadge.vue';
 
 const fields: Record<string, PlaygroundFieldType> = {
   label: { type: 'text' },
-  tone: { type: 'select', options: ['neutral', 'success', 'warning', 'danger'] },
+  tone: { type: 'select', options: [...BADGE_TONES] },
   pill: { type: 'boolean' },
 };
 

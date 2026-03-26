@@ -9,16 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonSize, ButtonVariant } from './DemoButton.types';
+import type { DemoButtonProps } from './DemoButton.types';
 
-interface Props {
-  label: string
-  size?: ButtonSize
-  variant?: ButtonVariant
-  disabled?: boolean
-}
-
-withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<DemoButtonProps>(), {
   size: 'md',
   variant: 'primary',
   disabled: false,
